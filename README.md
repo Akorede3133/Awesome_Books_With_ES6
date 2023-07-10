@@ -11,8 +11,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [🚀 Description Video](#-description-video)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -39,14 +37,6 @@
 - **[Add Book: Users can add new books to their library by providing book details such as title and author Delete Book: Users can remove books from their library.]**
 
 - **[Local Storage: Book data is stored in the browser's local storage, allowing users to access their library even after closing the app.]**
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- Not Available
-
-## 🚀 Description Video<a name="video-demo"></a>
-
-- Not Available
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
