@@ -1,7 +1,10 @@
+import getDateAndTime from './date_and_time.js';
+
 const bookListContainer = document.querySelector('.book-list');
 const form = document.querySelector('form');
 const titleInput = document.querySelector('.title');
 const authorInput = document.querySelector('.author');
+const datePara = document.querySelector('.date--para');
 class BookList {
   constructor() {
     this.bookArray = [];
@@ -17,6 +20,7 @@ class BookList {
   }
 
   displayBook() {
+    datePara.textContent = getDateAndTime();
     bookListContainer.innerHTML = '';
     const bookElement = this.bookArray.map((book) => {
       const bookCard = `  <li>
