@@ -10,16 +10,16 @@ class BookList {
     this.bookArray = [];
   }
 
-  addBook(title, author, id) {
+  addBook = (title, author, id) => {
     const newBook = { title, author, id };
     this.bookArray = [...this.bookArray, newBook];
   }
 
-  removeBook(id) {
+  removeBook = (id) => {
     this.bookArray = this.bookArray.filter((book) => book.id !== id);
   }
 
-  displayBook() {
+  displayBook = () => {
     datePara.textContent = getDateAndTime();
     bookListContainer.innerHTML = '';
     const bookElement = this.bookArray.map((book) => {
@@ -46,11 +46,12 @@ class BookList {
     });
   }
 
-  checkBookListLength() {
-    return this.bookArray.length > 0 ? bookListContainer.classList.add('show--border') : bookListContainer.classList.remove('show--border');
+  checkBookListLength = () => {
+    const value = this.bookArray.length > 0 ? bookListContainer.classList.add('show--border') : bookListContainer.classList.remove('show--border');
+    return value;
   }
 
-  addBookToUI() {
+  addBookToUI = () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const id = Math.floor(Math.random() * 2000);
@@ -62,12 +63,13 @@ class BookList {
     });
   }
 
-  addAndUpdateBooksToLocalStorage() {
+  addAndUpdateBooksToLocalStorage = () => {
     localStorage.setItem('bookList', JSON.stringify(this.bookArray));
   }
 
-  getBookFromLocalStorage() {
-    return localStorage.getItem('bookList') ? JSON.parse(localStorage.getItem('bookList')) : this.bookArray;
+  getBookFromLocalStorage = () => {
+    const check = localStorage.getItem('bookList');
+    return check ? JSON.parse(localStorage.getItem('bookList')) : this.bookArray;
   }
 }
 const book = new BookList();
