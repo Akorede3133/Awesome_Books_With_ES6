@@ -1,5 +1,4 @@
-import { DateTime } from '../node_modules/luxon/src/luxon.js';
-// import { DateTime } from 'luxon';
+import { DateTime } from './luxon.js';
 
 const getDateAndTime = () => {
   const now = DateTime.local();
